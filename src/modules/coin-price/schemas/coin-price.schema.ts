@@ -12,6 +12,10 @@ export class CoinPrice {
   market: string;
 
   @Prop()
+  @Field(() => String)
+  coin: string;
+
+  @Prop()
   @Field(() => Float)
   price: number;
 

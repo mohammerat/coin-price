@@ -13,8 +13,7 @@ import { NobitexProviderService } from '../providers';
 import { GenericResponseType } from '../../shared';
 
 import { ChangeIntervalInput, CoinPriceInput } from './coin-price.input';
-import { CoinPrice } from './schemas/coin-price.schema';
-import { Config } from './schemas';
+import { Config, CoinPrice } from './schemas';
 
 @Injectable()
 export class CoinPriceService implements OnModuleInit {
@@ -120,11 +119,13 @@ export class CoinPriceService implements OnModuleInit {
       if (now.getHours() <= 12) {
         this.coinModel1.create({
           market: 'kraken',
+          coin: 'btc',
           price: +providerResponse.btc.kraken.price,
         });
       } else {
         this.coinModel2.create({
           market: 'kraken',
+          coin: 'btc',
           price: +providerResponse.btc.kraken.price,
         });
       }
