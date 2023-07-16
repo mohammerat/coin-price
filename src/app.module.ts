@@ -4,7 +4,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriverConfig, ApolloDriver } from '@nestjs/apollo';
 
-import { CoinPriceModule } from './modules/coin-price/coin-price.module';
+import { CoinPriceModule } from './modules/coin-price';
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
