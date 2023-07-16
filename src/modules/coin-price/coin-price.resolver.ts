@@ -2,7 +2,7 @@ import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
 
 import { GenericResponseType } from 'src/shared';
 import { CoinPriceService } from './coin-price.service';
-import { CoinPrice } from './coin-price.schema';
+import { CoinPrice } from './schemas/coin-price.schema';
 import { ChangeIntervalInput, CoinPriceInput } from './coin-price.input';
 
 @Resolver(() => CoinPrice)

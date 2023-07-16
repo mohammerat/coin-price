@@ -6,7 +6,7 @@ import { NobitexProviderService, ProviderModule } from '../providers';
 
 import { CoinPriceResolver } from './coin-price.resolver';
 import { CoinPriceService } from './coin-price.service';
-import { CoinPrice, CoinPriceSchema } from './coin-price.schema';
+import { CoinPrice, CoinPriceSchema, Config, ConfigSchema } from './schemas';
 
 @Module({
   imports: [
@@ -15,7 +15,15 @@ import { CoinPrice, CoinPriceSchema } from './coin-price.schema';
       'DB1',
     ),
     MongooseModule.forFeature(
+      [{ name: Config.name, schema: ConfigSchema }],
+      'DB1',
+    ),
+    MongooseModule.forFeature(
       [{ name: CoinPrice.name, schema: CoinPriceSchema }],
+      'DB2',
+    ),
+    MongooseModule.forFeature(
+      [{ name: Config.name, schema: ConfigSchema }],
       'DB2',
     ),
     ScheduleModule.forRoot(),

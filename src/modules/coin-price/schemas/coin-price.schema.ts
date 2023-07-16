@@ -14,6 +14,9 @@ export class CoinPrice {
   @Prop()
   @Field(() => Float)
   price: number;
+
+  @Field(() => Date)
+  createdAt: Date;
 }
 
 export const CoinPriceSchema = SchemaFactory.createForClass(CoinPrice);
