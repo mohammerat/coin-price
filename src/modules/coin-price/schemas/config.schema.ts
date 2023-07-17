@@ -1,5 +1,12 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 
+/**
+ * Config Schema Model for Mongo Database
+ * (Mongoose)
+ *
+ * @export
+ * @class Config
+ */
 @Schema({
   collection: 'configs',
 })

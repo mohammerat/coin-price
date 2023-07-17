@@ -1,6 +1,13 @@
 import { Field, Float, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
+/**
+ * Coin Price Schema Model for Mongo Database
+ * (Mongoose)
+ *
+ * @export
+ * @class CoinPrice
+ */
 @Schema({
   timestamps: true,
   collection: 'coin-prices',

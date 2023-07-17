@@ -34,6 +34,11 @@ export class CoinPriceService implements OnModuleInit {
     this.logger = new Logger('CoinPrice/CoinPriceService');
   }
 
+  /**
+   * on module init start cron job based on saved config in db
+   *
+   * @memberof CoinPriceService
+   */
   async onModuleInit() {
     const cronIntervalConfig = await this.configModel1.findOne({
       key: 'cronInterval',

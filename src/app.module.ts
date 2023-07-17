@@ -15,6 +15,7 @@ import { CoinPriceModule } from './modules/coin-price';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    // import mongoose module async to use config service in it and load data from env file
     MongooseModule.forRootAsync({
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({

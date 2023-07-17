@@ -8,6 +8,12 @@ import { CoinPriceResolver } from './coin-price.resolver';
 import { CoinPriceService } from './coin-price.service';
 import { CoinPrice, CoinPriceSchema, Config, ConfigSchema } from './schemas';
 
+/**
+ * Coin Price Module
+ *
+ * @export
+ * @class CoinPriceModule
+ */
 @Module({
   imports: [
     MongooseModule.forFeature(
